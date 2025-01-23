@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>exercícico 041.html</title>
+    <style>
+        body{
+            padding: 20px;
+            font-size: 24pt;
+            text-align: center;
+        }
+        input{
+            font-size: 20pt;
+        }
+        footer{
+            border-top: 2px solid #000;
+            padding: 2px;
+        }
+        main{
+            height: 400px;
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <input type="date" name="dataInicial" id="dataInicial">
+        <input type="date" name="dataFinal" id="dataFinal">
+        <input type="button" value="Calcular" onclick="calcular()">
+        <div id="resultado">Aqui vai aparecer o resultado</div>
+    </main>
+    <footer>
+        <a 
+            href="file:///C:/Users/55219/Desktop/www%20Humberto%20Escultor/Curso%20Java%20Script/Exerc%C3%ADcios/exerc%C3%ADcio%20033.html"
+            target="_blank">
+            exercício 033.html
+        </a>
+    </footer>
+    <script>
+        function calcular(){
+            var inicial = document.getElementById('dataInicial')
+            var final = document.getElementById('dataFinal')
+            var resultado = document.getElementById('resultado')
+            var diferençaTempo = final - inicial
+            var diferençaEmDias = Math.ceil(diferençaTempo / (24 * 60 * 60 * 1000))
+            resultado.innerHTML = `A diferença entre as datas é de ${diferençaEmDias} dias.`
+            
+        }
+    </script>
+</body>
+</html>

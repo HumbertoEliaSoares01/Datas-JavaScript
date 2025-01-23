@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>exercício 033.html</title>
+    <style>
+        body{
+            background-color:#aaa
+        }
+        #inicial, #final, #botao {
+            height: 50px;
+            font-size: 20pt;
+            padding: 10px;
+            margin: 50px;
+        }
+        #botao{
+            margin-left: 100px;
+        }
+        h1, footer{
+            text-align: center;
+        }
+        footer{
+            font-size: 20pt;
+            border-top: 1px solid #000;
+            padding: 20px;
+        }
+    </style>
+</head>
+<body>
+    <input type="date" name="inicial" id="inicial" placeholder="data inicial">
+    <input type="date" name="final" id="final" placeholder="data final">
+    <input type="button" id="botao" value="Calcular Diferença" onclick="calculaDiferença()">
+    <h1>A diferença é de <span>?</span> dias</h1>
+    <footer> 
+        <a  href="https://www.youtube.com/watch?v=4X9cvbnNWmM"
+            target="_blank"
+            title="Vídeo do YouTube">
+            Criado por "Mão no código"
+        </a>
+    </footer>
+    <script src="operaData.js"></script>
+</body>
+</html>

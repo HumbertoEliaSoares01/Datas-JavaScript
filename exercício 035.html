@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 035</title>
+    <style>
+        html{
+            background-color: #aaa;
+        }
+        body{
+            text-align: center;
+            border: 1px solid #000;
+            border-radius: 50%;
+            height: 600px; width: 600px;
+            margin: auto;
+            background-color: #fff;
+            box-shadow: 0px 0px 50px #000;
+        }
+        header{
+            border-bottom: 1px solid #000;
+            margin-top: 25%;
+        }
+        header h1{
+            line-height: 150%;
+            margin-top: 0px;        }
+        div h1{
+            line-height: 250%;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Exercício 035<br>
+        Pegando data e hora do sistema</h1>
+    </header>
+    <div id="horaDoSistema">
+        <h1>
+            <script>
+                    var data = new Date()
+                    var hora = data.getHours() // horas
+                    var minuto = data.getMinutes('horaDoSistema') // minutos
+                    var dia = data.getUTCDate()
+                    var mes = data.getMonth()
+                    var ano = data.getFullYear()
+                    var diaSem = data.getDay()
+
+                    window.document.write(`Hoje é `)
+
+                    switch(diaSem){
+                        case 0: document.write('domingo')
+                            break
+                        case 1: document.write('segunda-feira')
+                            break
+                        case 2:  document.write('terça-feira')
+                            break
+                        case 3:  document.write('quarta-feira')
+                            break
+                        case 4:  document.write('quinta-feira')
+                            break
+                        case 5:  document.write('sexta-feira')
+                            break
+                        case 6:  document.write('sábado')
+                            break
+                        default:  document.write('ERRO - dia inválido')
+                    }
+                        document.write(` ${dia}/${mes+1}/${ano} <br>`)
+                    /*
+                        0 = domingo
+                        1 = segunda
+                        2 = terça-feira
+                        3 = quarta-feira
+                        4 = quinta-feira
+                        5 = sexta-feira
+                        6 = sábado
+                    */
+
+                    window.document.write(`Hora atual: ${hora} horas e ${minuto} minutos.<br>`)
+
+            </script>
+        </h1>
+    </div>
+    
+</body>
+</html>
